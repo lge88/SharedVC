@@ -10,16 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var label: UILabel!
+  @IBOutlet weak var button: UIButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    let now = NSDate()
+    label?.text = "\(now)"
+    
+    button?.layer.borderWidth = 2.0
+    button?.layer.cornerRadius = 4.0
+    button?.layer.borderColor = UIColor.blueColor().CGColor
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
 
 }
 
